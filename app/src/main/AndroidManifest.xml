@@ -2,7 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.yf.jar">
 
+    <permission
+        android:name="com.yf.jar.permission.ACCESS_PERSON_SERVICE"
+        android:protectionLevel="normal" />
+
+    <uses-permission android:name="com.yf.jar.permission.ACCESS_PERSON_SERVICE" />
+
     <application
+        android:name=".CustomApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -15,6 +22,36 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- 新进程 -->
+        <service
+            android:name=".aidl.PersonService"
+            android:process=":remote" />
+
+        <activity android:name=".aidl.PersonActivity" />
+
+        <service
+            android:name=".msg.MessengerService"
+            android:process=":remote" />
+
+        <activity android:name=".msg.MessengerActivity" />
+
+        <service
+            android:name=".binderpool.BinderPoolService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".binderpool.BinderPoolActvity" />
+        <activity android:name=".json.JsonActivity" />
+        <activity android:name=".optimize.Lay_Opt_Activity" />
+        <activity android:name=".network.NetWorkActivity" />
+        <activity android:name=".imageloader.ImageActivity" />
+        <activity android:name=".mvp.MvpActivity" />
+        <activity android:name=".di.Dagger2Activity" />
+        <activity android:name=".event.EventActivity" />
+        <activity android:name=".event.MActivity" />
+        <activity android:name=".db.DAOActivity" />
+        <activity android:name=".v4v7.RecyclerviewActivity"></activity>
     </application>
 
 </manifest>

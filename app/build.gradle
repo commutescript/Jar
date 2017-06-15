@@ -1,4 +1,10 @@
 apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'com.neenbedankt.android-apt'//不加这个，编译不过去
+
+
+
 
 android {
     compileSdkVersion 24
@@ -10,7 +16,40 @@ android {
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
+
+        //注意此处的位置
+        ndk {
+            moduleName "JNIDEMO"
+            stl "stlport_static"
+            ldLibs "log"
+        }
     }
+
+    sourceSets {
+        main {
+//            manifest.srcFile 'src/main/AndroidManifest.xml'
+//            java.srcDirs = ['src/main/java','.apt_generated']
+//            aidl.srcDirs = ['src/main/aidl','.apt_generated']
+//            assets.srcDirs = ['src/main/assets']
+            res.srcDirs =
+                    [
+//                            'src/main/res/home',
+//                            'src/main/res/login',
+//                            'src/main/res/mine',
+//                            'src/main/res/weather',
+                            'src/main/res/resource',
+                            'src/main/res/'
+
+                    ]
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
+
+
     buildTypes {
         release {
             minifyEnabled false
@@ -19,8 +58,50 @@ android {
     }
 }
 
+greendao {
+    schemaVersion 1    //<--数据库的版本，用于升级时候进行更改
+    daoPackage 'com.yf.jar.db.gen'     //存放自动生成代码的包
+    targetGenDir 'src/main/java'                  //...
+}
+
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:support-v4:24.0.0'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
+    compile 'eu.the4thfloor.volley:com.android.volley:2015.05.28'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.alibaba:fastjson:1.2.29'
+    compile 'org.greenrobot:greendao:3.2.0'
+    //    compile 'io.reactivex.rxjava2:rxjava:2.0.1'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    compile('com.squareup.retrofit2:adapter-rxjava:2.3.0') {
+        exclude module: 'rxjava'
+    }
+    compile 'com.facebook.fresco:fresco:1.3.0'
+
+    compile 'com.jakewharton:butterknife:8.6.0'
+    apt 'com.jakewharton:butterknife-compiler:8.6.0'
+
+    compile 'com.github.bumptech.glide:glide:4.0.0-RC0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
+    compile 'com.google.dagger:dagger:2.5'
+    apt 'com.google.dagger:dagger-compiler:2.5'
+    //编译，自动生成代码用
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+
+    apt 'com.bluelinelabs:logansquare-compiler:1.3.6'
+    compile 'com.bluelinelabs:logansquare-compiler:1.3.7'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.facebook.stetho:stetho:1.5.0'
+    compile 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+
 }

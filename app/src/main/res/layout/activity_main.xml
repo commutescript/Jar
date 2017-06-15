@@ -7,13 +7,16 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
-    tools:context="com.yf.android_jar.MainActivity">
+    android:orientation="vertical">
+
+
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="18dp"
+
         android:layout_gravity="center_horizontal"
         android:text="控件demo"
         />
@@ -21,23 +24,149 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="基础控件"
-        android:layout_margin="10dp"
+        android:textSize="18dp"
 
+        android:text="基础控件:"
+        android:layout_margin="10dp"
         />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/recycle_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RecyclerView"
+            android:layout_margin="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="基础控件:"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="基础控件:"
+            android:layout_margin="10dp"
+            />
+
+    </LinearLayout>
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/id_recyclerview"-->
+    <!--android:divider="#ffff0000"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--/>-->
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="高级组件"
+        android:textSize="18dp"
+        android:text="高级知识点:"
         android:layout_margin="10dp"
-
         />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/aidl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="aidl"
+            android:layout_margin="10dp"
+            />
+        <TextView
+            android:id="@+id/binderpool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="binderpool"
+            android:layout_margin="10dp"
+            />
+        <TextView
+            android:id="@+id/jni"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="jni"
+            android:layout_margin="10dp"
+            />
+        <TextView
+            android:id="@+id/messenger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="msg"
+            android:layout_margin="10dp"
+            />
+        <TextView
+            android:id="@+id/mvp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mvp"
+            android:layout_margin="10dp"
+            />
+
+    </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="常见开源控件"
+        android:textSize="18dp"
+
+        android:text="第三方框架:"
         android:layout_margin="10dp"
+
         />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/db"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="db"
+            android:layout_margin="10dp"
+            />
+        <TextView
+            android:id="@+id/di"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="di"
+            android:layout_margin="10dp"
+            />
+        <TextView
+            android:id="@+id/json"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="json"
+            android:layout_margin="10dp"
+            />
+        <TextView
+            android:id="@+id/net"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="net"
+            android:layout_margin="10dp"
+            />
+        <TextView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="img"
+            android:layout_margin="10dp"
+            />
+        <TextView
+            android:id="@+id/event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="event"
+            android:layout_margin="10dp"
+            />
+
+
+    </LinearLayout>
 
 </LinearLayout>
