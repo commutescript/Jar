@@ -51,7 +51,8 @@
         <activity android:name=".event.EventActivity" />
         <activity android:name=".event.MActivity" />
         <activity android:name=".db.DAOActivity" />
-        <activity android:name=".v4v7.RecyclerviewActivity"></activity>
+        <activity android:name=".v4v7.RecyclerviewActivity" />
+        <activity android:name=".v4v7.TablayoutActivity"></activity>
     </application>
 
 </manifest>
