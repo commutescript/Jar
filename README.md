@@ -1,10 +1,14 @@
-# Jar
+#Jar概述
 ##这是一个各种android控件使用方法的demo，会有源码讲解。
-###包括基础控件
+
+###基础控件
+
 ###高级组件
+
 ###常见开源控件
-##概述
-现在移动端的就业形式相对较差，各个公司对员工的技术要求也相应的提高，主要体现在对重要知识点的要求提高以及对第三方的框架原理的熟悉上。总结的Android开发技术堆栈如下：
+
+
+总结的Android开发技术堆栈如下：
 
 ![这里写图片描述](http://img.blog.csdn.net/20170511144632884?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMTA3MjYxMw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
                             
