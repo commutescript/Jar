@@ -1,21 +1,18 @@
 #Jar概述
-##这是一个各种android控件使用方法的demo，会有源码讲解。
-
-###基础控件
-
-###高级组件
-
-###常见开源控件
-
-
-总结的Android开发技术堆栈如下：
-
-![这里写图片描述](http://img.blog.csdn.net/20170511144632884?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMTA3MjYxMw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-                            
-所以为了提高自己的竞争力，你需要：
+##本源码主要是为了提高：
 - 对android的高级知识点熟悉；
 - 对主要的框架熟悉。
-- demo地址：https://github.com/commutescript/Jar
+- demo地址：https://github.com/commutescript/Jar  这是一个各种android控件及框架使用方法的demo，有源码讲解。
+
+开发环境使用：win10 + Android Sutido + jdk7
+
+围绕以下三个方面进行编码：
+
+- 基础控件
+
+- 高级知识点
+
+- 第三方框架
 
 ##java基础
 Android开发以java语言为基础，所以熟练的掌握java的基本使用和特征是非常重要的。
